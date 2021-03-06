@@ -1,7 +1,7 @@
 # HomeAutomation\_RBOARD_ENC28J60
 ## Introduction
 
-This project was inspired by FHEM homeautomation webio module. The arduino relay board from itead - RBOARD [Link](http://www.itead.cc/wiki/RBoard) - using an external ethernet ENC28J60 module provides the cheapest possible homeautomation. The relay board provides 4 relays and a large number of digital inputs for light switches (rockers) and window sensors. 
+This project was inspired by FHEM [Link](https://wiki.fhem.de/wiki/Hauptseite) homeautomation webio module. The arduino relay board from itead - RBOARD [Link](http://www.itead.cc/wiki/RBoard) - using an external ethernet ENC28J60 module provides the cheapest possible homeautomation. The relay board provides 4 relays and a large number of digital inputs for light switches (rockers) and window sensors. 
 
 This is a homebrew arduino based home automation software with http ethernet control. 
 The software has been running on 14 boards installed into my house for a few years now. The ethernet chip is very sensitive and can disconnect from time to time. 
@@ -21,17 +21,17 @@ See pictures in the docs folder.
 
 ## Features
 + Mode select - 4 lights, 3 lights + gong, 2 lights + window, 2 windows
-+ Blinds - configurable up and down time for good positioning
++ Blinds - configurable up and down time for good positioning. Local control and remote.
 + Windows - open / closed - blinds are not closed if window is open (this ensures I am not locked out when sat on the patio (-; )
-+ Gong - switch relay only as long as the bell is pressed (no toggle)
-+ Light - on / off - configurable timer for stairs etc
++ Gong - switch relay only as long as the bell button is pressed (no toggle)
++ Light - on / off - configurable timer for stairs etc. Press for > 1s will switch to on without timer.
 + Extra safe double eeprom configuration for restoring errors that may occur during write operations (e.g. power cut during write)
 + Maximum possible stability of ENC28J60 http usage. Be warned, this is a really BAD chip (but dirt cheap). There are still the occasional "reconnects".
 + HTML homepage for each board provides a rudimentary control and partially configure the board. 
 
 ## FHEM
-I am not brilliant at programming perl. It is still missing some error logging and light toggle function etc. I does its job, but is not pretty !
-The perl module is in the fhem folder.
+I am not brilliant at programming perl. The script is still missing some error logging and light toggle function etc. I does its job, but is not pretty ! The module uses a master slave principle. The master is responsible for the board, slave mode just has access to one light, window, sensor etc.
+The perl module is in the fhem folder together with my favourite excerts from my fhem configuration file.
 
 ## Libraries "borrowed"
 Thanks to the authors or the libraries I have used. I should have forked the projects but I am new to github, so will do eventually (-;
