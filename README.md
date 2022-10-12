@@ -1,6 +1,8 @@
 # HomeAutomation\_RBOARD_ENC28J60
 ## Introduction
 
+Before I start, it is only fair to mention that I have (2022) replaced this entire setup with Loxone miniservers (in the 24x28 in wall boxes) and Loxone wired tree devices (14x14 in wall boxes). This system is fun to configure and use, DIY hobby friendly, its extremely reliable and the App is professionally implemented rich in features.
+
 This project was inspired by FHEM [Link](https://wiki.fhem.de/wiki/Hauptseite) homeautomation webio module. The arduino relay board from itead - RBOARD [Link](http://www.itead.cc/wiki/RBoard) - using an external ethernet ENC28J60 module provides the cheapest possible homeautomation. The relay board provides 4 relays and a large number of digital inputs for light switches (rockers) and window sensors. 
 
 This is a homebrew arduino based home automation software with http ethernet control. 
